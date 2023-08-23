@@ -1,6 +1,12 @@
-const greeting = require('./greeting'); // Import the greeting module
+const readline = require('readline');
+const controller = require('./controller');
 
-const name = 'John';
-const message = greeting(name);
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-console.log(message);
+rl.question('Enter your name: ', function(name) {
+  controller.generateGreeting(name);
+  rl.close();
+});
