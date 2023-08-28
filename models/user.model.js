@@ -1,7 +1,7 @@
 
 class MainModel {
     getData() {
-      return "Hello from the Model!";
+      return "Hello World How Are You";
     }
   }
   
